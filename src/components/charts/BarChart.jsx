@@ -23,7 +23,7 @@ const BarChart = ({ selectedMonth }) => {
   useEffect(() => {
     const fetchBarData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/barchart', {
+        const response = await axios.get('http://localhost:3000/products/charts/barchart', {
           params: { month: selectedMonth }
         });
 

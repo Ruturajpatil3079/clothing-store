@@ -12,7 +12,7 @@ const Statistics = ({ selectedMonth }) => {
   useEffect(() => {
     const fetchStatistics = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/statistics`, {
+        const response = await axios.get(`http://localhost:3000/products/statistics`, {
           params: { month: selectedMonth }
         });
         

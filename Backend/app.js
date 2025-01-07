@@ -11,22 +11,19 @@ app.use(express.json());
 
 
 // Endpoint to List Transactions with Search and Pagination
-app.use('/', require('./services/FetchAllData'))
+app.use('/products', require('./services/FetchAllData'))
 
 // // Endpoint for Statistics
-app.use('/', require('./services/FetchStatistics'))
+app.use('/products', require('./services/FetchStatistics'))
 
 // // Endpoint for Bar Chart
-app.use('/', require('./services/BarChart'))
+app.use('/products/charts', require('./services/charts/BarChart'))
 
 // // Endpoint for Pie Chart
-app.use('/', require('./services/PieChart'))
+app.use('/products/charts', require('./services/charts/PieChart'))
 
 // Endpoint for Combine API
-app.use('/', require('./services/CombineAPI'))
-
-
-
+app.use('/products/transactions', require('./services/CombineAPI'))
 
 
 // Start the Server

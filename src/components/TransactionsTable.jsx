@@ -23,7 +23,7 @@ const TransactionsTable = ({ selectedMonth, searchText }) => {
 
   const fetchTransactions = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/transactions", {
+      const response = await axios.get("http://localhost:3000/products/transactions", {
         params: {
           month: selectedMonth,
           search: searchText,

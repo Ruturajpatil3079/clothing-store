@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
-const Transaction = require('../models/ClothTransaction');
-const monthMiddleware = require('../middleware/GetMonth');
+const Transaction = require('../../models/ClothTransaction');
+const monthMiddleware = require('../../middleware/GetMonth');
 
 router.get('/barchart',monthMiddleware, async (req, res) => {
     try {
