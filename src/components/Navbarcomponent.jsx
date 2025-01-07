@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { FaUser } from 'react-icons/fa'; // Use FaUser for user icon
+import { FaUser } from 'react-icons/fa';
+import inventorymanagement from '../assets/inventory-management.png'
 
 function Navbarcomponent() {
 
@@ -8,7 +9,8 @@ function Navbarcomponent() {
     <>
       <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <img style={{width:'40px'}} src={inventorymanagement} alt="system-logo" />
+          <Navbar.Brand className='navbrand' href="#home">
             Cloths Management System
           </Navbar.Brand>
           <Nav.Link href="#dashboard" className="text-white">

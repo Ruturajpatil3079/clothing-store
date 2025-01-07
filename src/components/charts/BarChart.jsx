@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js';
 import axios from 'axios';
@@ -36,7 +37,7 @@ const BarChart = ({ selectedMonth }) => {
                 data: Object.values(priceRanges),
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
+                borderWidth: 2
               }
             ]
           });
@@ -62,7 +63,7 @@ const BarChart = ({ selectedMonth }) => {
 
   return (
     <div className="bar-chart">
-      <h3>Bar Chart for Month - {selectedMonth}</h3>
+      <h2>Bar Chart for Month - {selectedMonth}</h2>
       <Bar data={barData} options={options} />
     </div>
   );

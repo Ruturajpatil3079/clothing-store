@@ -18,3 +18,23 @@ html, body {
   width: 100%; 
   max-width: 800px; 
 }
+
+.bar-chart h2{
+  text-align: center;
+}
+
+.barcharts{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.peginations{
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbrand{
+  font-weight: 600;
+  margin-left: 10px;
+}

@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -6,15 +7,6 @@ require('./connection');
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-
-
-
-// Helper Function to Get Month Number from Name
-// const getMonthNumber = (monthName) => {
-//     const date = new Date(`${monthName} 1, 2000`);
-//     return isNaN(date.getMonth()) ? null : date.getMonth() + 1;
-// };
 
 
 

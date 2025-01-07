@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbarcomponent';
 import TransactionsTable from './components/TransactionsTable';
 import Charts from './components/Charts';
@@ -31,7 +31,7 @@ function App() {
           </div>
 
           <div className="d-flex align-items-center">
-            <span>select month :</span>
+            <span>Select Month :</span>
             <Form.Select
               aria-label="Select month"
               value={selectedMonth}
@@ -39,7 +39,7 @@ function App() {
               className="w-auto ms-2"
             >
               {[
-                'January', 'February', 'March', 'April', 'May', 'June', 
+                'January', 'February', 'March', 'April', 'May', 'June',
                 'July', 'August', 'September', 'October', 'November', 'December'
               ].map(month => (
                 <option key={month} value={month}>{month}</option>
@@ -48,11 +48,20 @@ function App() {
           </div>
         </div>
       </div>
-      
-      <TransactionsTable selectedMonth={selectedMonth} searchText={searchText} />
-      <Charts selectedMonth={selectedMonth} />
-      <div className="container mt-3 mb-4 container-left">
-        <BarChart selectedMonth={selectedMonth} />
+
+      <div className="container mt-3">
+        <TransactionsTable selectedMonth={selectedMonth} searchText={searchText} />
+        <hr className='mt-5' />
+        <div className="row barcharts">
+          <h2 className='mt-3 mb-4 '>Transaction Statistics for Analysis</h2>
+          <div className="col-md-4">
+            <Charts selectedMonth={selectedMonth} />
+
+          </div>
+          <div className="col-md-8 mb-5 ">
+            <BarChart selectedMonth={selectedMonth} />
+          </div>
+        </div>
       </div>
     </>
   );
